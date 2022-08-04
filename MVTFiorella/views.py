@@ -7,7 +7,6 @@ from datetime import datetime
 def index(request):
     # paso0 : Crear contexto
     datos = {"index": [1,2,3], "familia": "FiorellaPaniagua"}
-    datos= {"fecha_actual":datetime.now()}
     #paso1: Cargar contenido HTML
     archivo = open(r"C:\Users\User\Downloads\python\clase 18\MVTFiorellaPaniagua\MVTFiorella\MVTFiorella\templates\index.html", "r")
     contenido = archivo.read()
