@@ -7,19 +7,23 @@
     <title>Mi familia Fio </title>
 </head>
 <body>
-    <h1 style=" color:rgb(161, 60, 35)">Listado de los integrantes de mi familia:  {{familia}}</h1>
-    <p>Inicio de secion {{fecha_actual}}</p> 
-        {% for lista in index %}
-
-            {% if lista <= 1 %}
-                <p style="color: rgb(21, 187, 21)"> {{lista}}.-  Mama : Mirtha Barrancos</p>
-            {% elif lista == 2 %}
-                <p style="color:rgb(13, 92, 122)"> {{lista}}.- Papa: Wilber Paniagua</p>
-            {%elif lista >= 3 %}
-                <p style="color:rgb(223, 202, 20)"> {{lista}}.- Hermano: Sammy Paniagua</p>
-            {%else%}
-                <p style="color:rgb(35, 32, 53)"> Hermano{{lista}}: Sammy Paniagua</p>
-            {%endif%}
-        {%endfor%}
+    <h1 style=" color:rgb(161, 60, 35)">Listado de los integrantes de mi familia</h1>
+   <table>       
+        <tr>
+            {% for familiar in familia %}
+                <td class="row1" style="color: rgb(185, 202, 29)"> {{familiar.familiar}}</td><br>
+            {%endfor%}
+        </tr>
+        <tr>
+            {% for familiar in familia %}
+                <td class="row2" style="color: rgb(236, 115, 16)"> {{familiar.nombre}}</td><br>
+            {%endfor%}
+        </tr>
+        <tr>
+            {% for familiar in familia %}
+                <td lass="row3" style="color: rgb(23, 5, 37)"> {{familiar.nacimiento}}</td><br>
+            {%endfor%}
+        </tr>
+    </table>
 </body>
 </html>

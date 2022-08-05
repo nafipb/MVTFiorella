@@ -19,7 +19,7 @@ from Familia.views import lista_familia
 from MVTFiorella.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("index/", index),
+    path('index/', index),
     path('familia/', lista_familia)
     
 ]

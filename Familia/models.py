@@ -4,3 +4,4 @@ from django.db import models
 class Listado(models.Model):
     familiar = models.CharField(max_length=40)
     nombre = models.CharField(max_length=40)
+    nacimiento = models.IntegerField()

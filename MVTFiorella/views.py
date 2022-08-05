@@ -3,10 +3,12 @@ from re import template
 from django.http import HttpResponse
 from django.template import Template, Context, loader
 from datetime import datetime
+from Familia.models import Listado
 
 def index(request):
     # paso0 : Crear contexto
-    datos = {"index": [1,2,3], "familia": "FiorellaPaniagua"}
+    familia = Listado.objects.all 
+    datos = {"familia":familia}
     #paso1: Cargar contenido HTML
     archivo = open(r"C:\Users\User\Downloads\python\clase 18\MVTFiorellaPaniagua\MVTFiorella\MVTFiorella\templates\index.html", "r")
     contenido = archivo.read()

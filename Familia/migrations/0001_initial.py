@@ -17,6 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('familiar', models.CharField(max_length=40)),
                 ('nombre', models.CharField(max_length=40)),
+                ('nacimiento', models.IntegerField())
             ],
         ),
     ]
